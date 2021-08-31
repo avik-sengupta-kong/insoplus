@@ -1,6 +1,12 @@
 **insoplus**
 
-A node js module for for add on functions on top of inso
+A node js module for for add on functions on top of inso.
+
+What the helper function can do.
+
+1. Remove upstreams when they are not needed.
+2. Add Route heders for either specific or for all routes.
+3. Add Route host for either specific or for all routes. 
 
 Install
 Save this localally and either add this in the path or call using the full path.
