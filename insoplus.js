@@ -78,9 +78,7 @@ if(command =='add-route-header'){
     console.log("No route Name supplied. New header " + header + " will be added for all routes for first service");
    }
 
-    // var dumpPath = path.resolve(__dirname,'deck-dump.yaml'); 
-    // //var headerName = headerValues[0];
-    // var dump = yaml.load(fs.readFileSync(dumpPath, "utf8"));
+
 
    
     conf.services[0].routes.map(x=>addHeaders(x, headerValues[0], headerValues[1], routeName));
@@ -122,6 +120,6 @@ if(command =='add-route-host'){
    }
  }
 
-console.log(conf);
+console.log(yaml.dump(conf));
 fs.writeFileSync(path.resolve("./", 'insoplus_' +spec), yaml.dump(conf));
 console.log("new config file is written in insoplus_" + spec );
